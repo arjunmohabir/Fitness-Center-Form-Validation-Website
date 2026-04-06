@@ -1,4 +1,6 @@
-# Fitness Center Form Validation Website
+# Fitness Center Form Validation Website\
+
+<img src="website-preview.PNG">
 
 ## Overview
 This project is a multi-page fitness center website built with HTML and JavaScript. It includes a homepage with membership information and a linked application form that uses client-side validation to check user input before submission.
