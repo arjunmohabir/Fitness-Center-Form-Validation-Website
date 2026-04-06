@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Arjun's Fitness Center</title>
+<style>
+body{
+background-image: url('background.png');
+background-size: cover;
+}
+</style>
+<script>
+        function validate() {
+
+            if (document.FitnessForm.FirstName.value == "" || document.FitnessForm.FirstName.value.length > 20) {
+                alert("Please provide your First Name!");
+                document.FitnessForm.FirstName.focus();
+                return false;
+            }
+            if (document.FitnessForm.LastName.value == "" || document.FitnessForm.LastName.value.length > 20) {
+                alert("Please provide your Last Name!");
+                document.FitnessForm.LastName.focus();
+                return false;
+            }
+            if (document.FitnessForm.Address.value == "") {
+                alert("Please provide your Address!");
+                document.FitnessForm.Address.focus();
+                return false;
+            }
+            if (document.FitnessForm.City.value == "") {
+                alert("Please provide your City!");
+                document.FitnessForm.City.focus();
+                return false;
+            }
+            if (document.FitnessForm.State.value == "") {
+                alert("Please provide your State!");
+                document.FitnessForm.State.focus();
+                return false;
+            }
+            if (document.FitnessForm.Zip.value == "" || isNaN(document.FitnessForm.Zip.value) || document.FitnessForm.Zip.value.length != 5) {
+                alert("Please provide your Zipcode! Ex. 12345.");
+                document.FitnessForm.Zip.focus();
+                return false;
+            }
+            if (document.FitnessForm.Phone.value == "" || isNaN(document.FitnessForm.Phone.value) || document.FitnessForm.Phone.value.length != 10) {
+                alert("Please provide your Phone Number! Ex. 0123456789");
+                document.FitnessForm.Phone.focus();
+                return false;
+            }
+            if (document.FitnessForm.email.value == "" || document.FitnessForm.email.value.indexOf("@") < 0 || document.FitnessForm.email.value.indexOf(".") < 0) {
+                alert("Please enter a valid Email Address");
+                document.FitnessForm.email.focus();
+                return false;
+            }
+            if (document.FitnessForm.Package.value == "-1") {
+                alert("Please choose a Package!");
+                document.FitnessForm.Package.focus();
+                return false;
+            }
+            if (!document.FitnessForm.gender[0].checked && !document.FitnessForm.gender[1].checked) {
+                alert("Please choose your Gender: Male or Female");
+                return false;
+            }
+            
+            if (document.FitnessForm.CardName.value == "") {
+                alert("Please provide the Name on the Card");
+                document.FitnessForm.CardName.focus();
+                return false;
+            }
+            if (document.FitnessForm.Card.value == "" || isNaN(document.FitnessForm.Card.value) || document.FitnessForm.Card.value.length != 16) {
+                alert("Please provide your 16-digit card number");
+                document.FitnessForm.Card.focus();
+                return false;
+            }
+            if (document.FitnessForm.Expiration.value == "") {
+                alert("Please provide your card expiration date MM/YY");
+                document.FitnessForm.Expiration.focus();
+                return false;
+            }
+            if (document.FitnessForm.CVV.value == "" || isNaN(document.FitnessForm.CVV.value) || document.FitnessForm.CVV.value.length != 3) {
+                alert("Please provide your 3-digit CVV number");
+                document.FitnessForm.CVV.focus();
+                return false;
+            }
+            if (document.FitnessForm.BillingZip.value == "" || isNaN(document.FitnessForm.BillingZip.value) || document.FitnessForm.BillingZip.value.length != 5) {
+                alert("Please provide your card billing Zip Code in the format #####.");
+                document.FitnessForm.BillingZip.focus();
+                return false;
+            }
+            
+            
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <center>
+<div style="background-color:black; width: 10%;">
+<p style="font-size: 30px; color: beige; " >
+<b><a href="index.html">Homepage</a></b>
+</p>
+</center>
+</div>
+    <form name="FitnessForm" onsubmit="return validate();">
+        <center>
+	<div style="background-color:#FFFFFF; border:10px solid black; width:40%; font-size:15pt">
+            
+                <h4>Personal Details</h4>
+                <div>
+                    First Name:<br><input type="text" name="FirstName"><br>
+                    Last Name:<br><input type="text" name="LastName"><br>
+                    Address:<br><input type="text" name="Address"><br>
+                    City:<br><input type="text" name="City"><br>
+                    State:<br><input type="text" name="State"><br>
+                    Zip Code:<br><input type="text" name="Zip"><br>
+                    Phone Number:<br><input type="text" name="Phone"><br>
+                    Email:<br><input type="text" name="email"><br>
+                    Package:<br>
+                    <select name="Package">
+                        <option value="-1" selected>Select a package..</option>
+                        <option value="1">Bronze Package</option>
+                        <option value="2">Iron Package</option>
+                        <option value="3">Emerald Package</option>
+                        <option value="4">Diamond Package</option>
+                    
+                    <br><input type="reset" value="Reset Form"><br>
+                </div>
+                
+                <div>
+                    <h4>Add Credit Card</h4>
+                    Name on Card:<br><input type="text" name="CardName"><br>
+                    Credit Card Number:<br><input type="text" name="Card"><br>
+                    Expiration Date (MM/YY):<br><input type="text" name="Expiration"><br>
+                    CVV:<br><input type="text" name="CVV"><br>
+                    Billing Zip Code:<br><input type="text" name="BillingZip"><br>
+                    
+                </div>
+<br>
+                
+                <input type="submit" value="Submit"><br><br>
+        </div>
+<center>
+<div style="background-color:black; width: 40%;">
+<p style="font-size: 30px; color: beige; " >
+<h2 style="color: white;">Paying Cash? Inquire In Person! Our associates are happy to help.</h2>
+</p>
+</center>	
+</center>
+    </form>
+</body>
+</html>
+
+
